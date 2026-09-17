@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Run Together</title>
+<meta name="description" content="Run Together is a personal, open, non-commercial Flutter + Node.js project: a live GPS run-tracking app that lets two friends see each other's position and pace in real time while running apart.">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #121212; }
+    a { color: #8ab4f8; }
+    code { background: #262626; }
+  }
+  h1 { font-size: 2rem; margin-bottom: 4px; }
+  .tagline { color: #666; font-size: 1.05rem; margin-top: 0; }
+  h2 { font-size: 1.15rem; margin-top: 2.5rem; }
+  ul { padding-left: 1.2rem; }
+  code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  footer { margin-top: 4rem; font-size: 0.85rem; color: #888; }
+</style>
+</head>
+<body>
+  <h1>Run Together</h1>
+  <p class="tagline">Just because you aren't together doesn't mean you're not gonna wanna run together.</p>
+
+  <p>
+    Run Together is a personal, non-commercial software project: a cross-platform
+    (iOS + Android) Flutter app for live GPS run tracking, paired with a
+    Node.js/TypeScript relay server for real-time position and stats sharing
+    between two runners who are apart. It started as a rewrite of a few earlier,
+    messier attempts at the same idea into a single shared codebase.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Tracks a run's live GPS route, distance, pace, and elevation.</li>
+    <li>Lets a friend pair into your run over a lightweight WebSocket relay, so
+      you can see each other's live position and stats side by side even when
+      you're running in two different places.</li>
+    <li>Records history: saved routes, pace/elevation charts, personal-record
+      and milestone badges, and replay/ghost-racing against a past run.</li>
+    <li>Friends, an activity feed, and photo/video sharing on saved runs.</li>
+  </ul>
+
+  <h2>How it's built</h2>
+  <p>
+    The mobile app is written in Flutter/Dart. The backend is a small
+    Node.js/TypeScript relay server (Express + a plain WebSocket protocol for
+    live pairing), backed by DynamoDB for accounts/friends/activity data and
+    S3 for media, deployed on Render.
+  </p>
+
+  <h2>Status</h2>
+  <p>
+    This is a hobby project, built and maintained by one person for personal
+    use with friends and family - not a commercial product, and not
+    monetized in any way.
+  </p>
+
+  <footer>
+    <p>Run Together &middot; a personal software project.</p>
+  </footer>
+</body>
+</html>
